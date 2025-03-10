@@ -1,0 +1,16 @@
+A. FastAPI
+
+1. fastAPI + postman  이해 및 실습 (postman dowload와 cloud 버젼의 이해)
+2. ngrok 이해 및 실습 (API Key  발급받기)
+3. ngrok을 사용하여 fastAPI의 local port 를 외부 endpoint로 포트 포워딩
+4. 외부 endpoint로 postman을 사용하여 POST
+- http://127.0.0.1:8000/items/1
+- Params " Body" , raw 
+- {
+  "id": 1,
+  "name": "Desktop",
+  "description": "A Ultra high-performance laptop"
+}
+
+B. Pydantic 이해 및 실습
+
