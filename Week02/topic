@@ -1,5 +1,4 @@
 A. FastAPI
-
 1. fastAPI + postman  이해 및 실습 (postman dowload와 cloud 버젼의 이해)
 2. ngrok 이해 및 실습 (API Key  발급받기)
 3. ngrok을 사용하여 fastAPI의 local port 를 외부 endpoint로 포트 포워딩
@@ -14,3 +13,6 @@ A. FastAPI
 
 B. Pydantic 이해 및 실습
 
+C. https://dacon.io/ 에서 경진대회 참여 실습
+- 채무 불이행 여부 예측 해커톤: 불이행의 징후를 찾아라! -- 데이콘 해커톤 | 알고리즘 | 정형 | 분류 | 금융 | ROC-AUC
+- 데이저전처리, 훈련/검증데이터 구분, Hyperparametertuning, Randomgridsearch
