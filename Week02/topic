@@ -1,24 +1,58 @@
-A. FastAPI (crud_main.py)
-1. fastAPI + postman  이해 및 실습 (postman dowload와 cloud 버젼의 이해)
-2. ngrok 이해 및 실습 (API Key  발급받기)
-3. ngrok을 사용하여 fastAPI의 local port 를 외부 endpoint로 포트 포워딩
-4. 외부 endpoint로 postman을 사용하여 POST
-- http://127.0.0.1:8000/items/1
-- Params " Body" , raw 
-- {
-  "id": 1,
-  "name": "Desktop",
-  "description": "A Ultra high-performance laptop"
-}
+A. postman  CRUD 이해 및 실습
+  1. postman cloud 버젼으로 실습하기
+  2. https://jsonplaceholder.typicode.com
+  📌 1) Create (POST 요청)
+        URL: https://jsonplaceholder.typicode.com/posts
+        Method: POST
+        Headers:
+        Content-Type: application/json
+        Body (JSON - raw)
+        {
+          "title": "New Post",
+          "body": "This is a test post.",
+          "userId": 1
+        }
+  📌 2) Read (GET 요청)
+        URL: https://jsonplaceholder.typicode.com/posts/1
+  📌 3) Update (PUT 요청)
+        URL: https://jsonplaceholder.typicode.com/posts/1
+        Method: PUT
+        Headers:
+        Content-Type: application/json
+        Body (JSON - raw)
+        {
+          "id": 1,
+          "title": "Updated Post",
+          "body": "This is an updated post.",
+          "userId": 1
+        }
+  📌 4) Delete (DELETE 요청)
+        URL: https://jsonplaceholder.typicode.com/posts/1
+        Method: DELETE
+        Headers: 없음
+        실제 데이터가 삭제되지는 않지만, 요청이 성공한 것처럼 응답
 
-B. Pydantic 이해 및 실습
-- 비지니스로직(Server) 처리 전에 데이터 검증
+B. FastAPI (crud_main.py)
+  1. fastAPI + postman  이해 및 실습 (postman dowload와 cloud 버젼의 이해)
+  2. ngrok 이해 및 실습 (API Key  발급받기)
+  3. ngrok을 사용하여 fastAPI의 local port 를 외부 endpoint로 포트 포워딩
+  4. 외부 endpoint로 postman을 사용하여 POST
+  - http://127.0.0.1:8000/items/1
+  - Params " Body" , raw 
+  - {
+    "id": 1,
+    "name": "Desktop",
+    "description": "A Ultra high-performance laptop"
+  }
 
-C. iris 데이터로 예측모형을 생성(train_model.py) --> fastAPI로 "/predict"에 입력데이터를 POST하고 예측값 생성(gradio_app.py)
-- main.py  
-- train_model.py
-- gradio_app.py
+C. Pydantic 이해 및 실습
+  - 비지니스로직(Server) 처리 전에 데이터 검증
 
-D. https://dacon.io/ 에서 경진대회 참여 실습
-- 채무 불이행 여부 예측 해커톤: 불이행의 징후를 찾아라! -- 데이콘 해커톤 | 알고리즘 | 정형 | 분류 | 금융 | ROC-AUC
-- 데이저전처리, 훈련/검증데이터 구분, Hyperparametertuning, Randomgridsearch
+D. iris 데이터로 예측모형을 생성(train_model.py) --> fastAPI로 "/predict"에 입력데이터를 POST하고 예측값 생성(gradio_app.py)
+  - main.py  
+  - train_model.py
+  - gradio_app.py
+
+E. https://dacon.io/ 에서 경진대회 참여 실습
+  - 채무 불이행 여부 예측 해커톤: 불이행의 징후를 찾아라! -- 데이콘 해커톤 | 알고리즘 | 정형 | 분류 | 금융 | ROC-AUC
+  - 데이저전처리, 훈련/검증데이터 구분, Hyperparametertuning, Randomgridsearch
