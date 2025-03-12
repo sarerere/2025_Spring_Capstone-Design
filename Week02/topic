@@ -49,9 +49,9 @@ C. Pydantic 이해 및 실습
   - 비지니스로직(Server) 처리 전에 데이터 검증
 
 D. iris 데이터로 예측모형을 생성(train_model.py) --> fastAPI로 "/predict"에 입력데이터를 POST하고 예측값 생성(gradio_app.py)
-  - main.py  
-  - train_model.py
-  - gradio_app.py
+  - 1. train_model.py (예측모형 생성하여 pkl 저장)
+  - 2. main.py  (terminal 1 열고 : uvicorn main:app --reload)
+  - 3. gradio_app.py  (terminal 2 열고)
 
 E. https://dacon.io/ 에서 경진대회 참여 실습
   - 채무 불이행 여부 예측 해커톤: 불이행의 징후를 찾아라! -- 데이콘 해커톤 | 알고리즘 | 정형 | 분류 | 금융 | ROC-AUC
