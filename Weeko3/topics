@@ -16,7 +16,7 @@ jinja
     └── script.js          # JavaScript 파일
 
 ## 설명
-- 
+- 작동원리
 1. 사용자가 루트 URL (/)에 접속하면 --> GET 요청을 보냄.
 2. FastAPI가 비동기 핸들러 (read_root)를 실행.
 3. index.html을 찾아 렌더링하고, request 객체를 템플릿으로 사전형으로 전달.
@@ -43,7 +43,7 @@ jinja
     <!-- User-Agent 표시 -->
     <p><strong>User-Agent:</strong> {{ request.headers.get('user-agent', 'Unknown') }}</p>
 
-- http://127.0.0.1:8000/ : 사용자가 접속하는 root에 아래 하단에 이게 표시
+-> http://127.0.0.1:8000/ : 사용자가 접속하는 root에 아래 하단에 이게 표시
     Current URL: http://127.0.0.1:8000/
     Client IP: 127.0.0.1
     Request Method: GET
