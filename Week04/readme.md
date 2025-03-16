@@ -67,12 +67,12 @@
 
 ############  전체 작동 흐름  ############### 
 
-    애플리케이션이 시작되면 database.init_db()가 실행되어 필요한 테이블을 생성한 후
-    클라이언트가 API 엔드포인트에 요청을 보내면
-    main.py의 라우트 핸들러가 요청을 받아 적절한 crud.py 함수를 호출하며
-    crud.py는 데이터베이스 연결을 생성하고 SQL 쿼리를 실행하고
-    결과 데이터는 models.py에 정의된 Pydantic 모델로 변환하여
-    FastAPI는 이 Pydantic 모델을 자동으로 JSON으로 직렬화하여 클라이언트에 응답
+    Step 1. 애플리케이션이 시작되면 database.init_db()가 실행되어 필요한 테이블을 생성한 후
+    Step 2. 클라이언트가 API 엔드포인트에 요청을 보내면
+    Step 3. main.py의 라우트 핸들러가 요청을 받아 적절한 crud.py 함수를 호출하고
+    Step 4. crud.py는 데이터베이스 연결을 생성하고 SQL 쿼리를 실행하고
+    Step 5. 결과 데이터는 models.py에 정의된 Pydantic 모델로 변환하여
+    Step 6. FastAPI는 이 Pydantic 모델을 자동으로 JSON으로 직렬화하여 클라이언트에 응답하게 된다.
 
 ---> FastAPI를 사용한 MVC 패턴의 구현 방식
         Model: models.py (데이터 구조 정의)
