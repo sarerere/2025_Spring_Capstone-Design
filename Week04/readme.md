@@ -12,11 +12,13 @@
 - FastAPI 애플리케이션의 진입점으로, API 엔드포인트를 정의
 - FastAPI 인스턴스를 생성하고 API 제목을 설정
     @app.on_event("startup"): 앱 시작 시 데이터베이스 초기화를 수행
-    Class API 엔드포인트:
+
+   Class API 엔드포인트:
         POST /classes/: 새 학급 생성
         GET /classes/{class_id}: 특정 학급 조회
         GET /classes/: 모든 학급 목록 조회
-    Student API 엔드포인트:
+
+  Student API 엔드포인트:
         POST /students/: 새 학생 생성
         GET /students/{student_id}: 특정 학생 조회
         GET /classes/{class_id}/students/: 특정 학급의 학생 목록 조회
